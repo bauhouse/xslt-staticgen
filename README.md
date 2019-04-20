@@ -1,5 +1,5 @@
-Welcome to Glitch
-=================
+XSLT Static Site Generator
+==========================
 
 Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
 
