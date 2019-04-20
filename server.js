@@ -1,12 +1,14 @@
 // server.js
+// import { xsltProcess, xmlParse } from 'xslt-processor';
 
 // express server
 const express = require('express');
 const app = express();
 
 // XML and XSLT
-var DOMParser = require('xmldom').DOMParser;
-// const XSLT = require('xsltjs').XSLT;
+const xsltProcess = require('xslt-processor').xsltProcess;
+const xmlParse = require('xslt-processor').xmlParse;
+const DOMParser = require('xmldom').DOMParser;
 
 // file system
 const fs = require('fs');
