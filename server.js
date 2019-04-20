@@ -4,9 +4,9 @@
 const express = require('express');
 const app = express();
 
-// XSLT
-const xsltjs = require('xsltjs');
-const XSLT = xsltjs.XSLT;
+// XML and XSLT
+var DOMParser = require('xmldom').DOMParser;
+// const XSLT = require('xsltjs').XSLT;
 
 // file system
 const fs = require('fs');
@@ -49,10 +49,9 @@ app.get('/index', function(req, res) {
   .then(files => {
     var xml = files[0];
     var xsl = files[1];
-    processXSLT(xml, xsl);
+    processXSLT(xml, xsl, res);
   });
   
-  res.send("Index");
 });
 
 // listen for requests :)
@@ -60,19 +59,15 @@ const listener = app.listen(process.env.PORT, function() {
   console.log('Your app is listening on port ' + listener.address().port);
 });
 
-function processXSLT(xml, xsl) {
+function processXSLT(xml, xsl, res) {
 
-  console.log(xml);
-  console.log(xsl);
+  var xml_string = xml;
+  var xsl_string = xsl;
   
-  XSLT
-  .process(xml, xsl)
-  .then(
-    (resultXML) => {
-      return console.log("XML");
-    },
-    (exception) => {
-      return console.log("Error");
-    }
-  );
+  xml = new DOMParser().parseFromString(xml_string);
+  xsl = new DOMParser().parseFromString(xsl_string);
+
+  // console.log(xml);
+  // console.log(xsl);
+  
 }
