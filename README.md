@@ -1,42 +1,24 @@
-XSLT Static Site Generator
-==========================
+# XSLT Static Site Generator
 
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
+## HTML Templates
 
-**Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
+This markup library contains the XML, XSLT and HTML used to build a basic demo of an XSLT static site generator. It is being maintained as a [Git repository on GitHub](https://github.com/bauhouse/xslt-static-site-generator).
 
-Find out more [about Glitch](https://glitch.com/about).
+### Preprocessing HTML
 
+XSLT is being used as a preprocessor (using xsltproc) to output valid, well-formed XHTML structure. This process of static site generation should be easy to manage on any Unix-based system (Mac, Linux) without having to install any software. On Windows, install xsltproc.
 
-Your Project
-------------
+To process HTML, run the `./build` script in the same directory as this README file.
 
-On the front-end,
-- edit `public/client.js`, `public/style.css` and `views/index.html`
-- drag in `assets`, like images or music, to add them to your project
+To process individual files, open the `workspace/build` file and find the xsltproc command referring to the HTML file you would like to process and run the command.
 
-On the back-end,
-- your app starts at `server.js`
-- add frameworks and packages in `package.json`
-- safely store app secrets in `.env` (nobody can see this but you and people you invite)
+### Design Templates
 
+The page layouts can be viewed in a browser at the following URLs: 
 
-Made by [Stephen Bau](https://glitch.com/@bauhouse)
----------------------
-
-I was able to install xsltproc on Glitch with some information from the forum post [Super user glitch console?](https://support.glitch.com/t/super-user-glitch-console/2960)
-
-I grabbed the source code from GitHub for GNOME/libxslt and compiled it.
-
-```
-cd /tmp
-git clone https://github.com/GNOME/libxslt.git
-cd libxslt
-./autogen.sh --prefix=/tmp
-make
-make install
-make ~/bin
-cp xsltproc ~/bin/xsltproc
-cd
-xsltproc --version
-```
+* http://bauhouse.github.com/xslt-static-site-generator/
+* http://bauhouse.github.com/xslt-static-site-generator/news/
+* http://bauhouse.github.com/xslt-static-site-generator/events/
+* http://bauhouse.github.com/xslt-static-site-generator/services/
+* http://bauhouse.github.com/xslt-static-site-generator/about/
+* http://bauhouse.github.com/xslt-static-site-generator/contact/
