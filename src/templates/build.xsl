@@ -27,7 +27,7 @@ xsltproc -v -o ../README.md templates/readme.xsl data/pages.xml;
 </xsl:template>
 
 <xsl:template match="page">
-  <xsl:text>xsltproc -v -o ../</xsl:text>
+  <xsl:text>xsltproc -v -o ../public/</xsl:text>
   <xsl:value-of select="@output" />
   <xsl:text> </xsl:text>
   <xsl:value-of select="@xslt" />
