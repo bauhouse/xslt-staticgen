@@ -2,11 +2,9 @@
 <xsl:stylesheet version="1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-<xsl:import href="../templates/master.xsl" />
-<xsl:import href="../templates/main.xsl" />
-
-<xsl:template match="data">
-  <xsl:call-template name="main" />
+<xsl:template name="nav">
+  <nav role="navigation" class="nav">
+  </nav>
 </xsl:template>
 
 </xsl:stylesheet>

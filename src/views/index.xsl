@@ -3,6 +3,7 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:import href="../templates/master.xsl" />
+<xsl:import href="../templates/main.xsl" />
 
 <xsl:template match="data">
   <xsl:call-template name="main" />
