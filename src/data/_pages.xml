@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+  <pages>
+    <page output="index.html" xslt="views/index.xsl" data-source="data/index.xml">
+      <title>Home</title>
+    </page>
+    <page output="news/index.html" xslt="views/news.xsl" data-source="data/news.xml">
+      <title>News</title>
+    </page>
+    <page output="events/index.html" xslt="views/events.xsl" data-source="data/events.xml">
+      <title>Events</title>
+    </page>
+    <page output="services/index.html" xslt="views/services.xsl" data-source="data/services.xml">
+      <title>Services</title>
+    </page>
+    <page output="about/index.html" xslt="views/about.xsl" data-source="data/about.xml">
+      <title>About</title>
+    </page>
+    <page output="contact/index.html" xslt="views/contact.xsl" data-source="data/contact.xml">
+      <title>Contact</title>
+    </page>
+  </pages>
+</data>
