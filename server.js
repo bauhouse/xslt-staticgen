@@ -1,13 +1,10 @@
 // server.js
-// import { xsltProcess, xmlParse } from 'xslt-processor';
 
 // express server
 const express = require('express');
 const app = express();
 
 // XML and XSLT
-const xsltProcess = require('xslt-processor').xsltProcess;
-const xmlParse = require('xslt-processor').xmlParse;
 const DOMParser = require('xmldom').DOMParser;
 
 // file system
@@ -73,17 +70,6 @@ function processXSLT(xml, xsl) {
   
   xml = new DOMParser().parseFromString(xml_string);
   xsl = new DOMParser().parseFromString(xsl_string);
-
-  /*
-  var output = xsltProcess(
-    xmlParse(xml_string),
-    xmlParse(xsl_string)
-  );
-  
-  console.log(output);
-  
-  return output;
-  */
 
   return "XSLT Processed" + xsl_string;
   

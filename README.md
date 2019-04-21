@@ -21,7 +21,22 @@ On the back-end,
 - safely store app secrets in `.env` (nobody can see this but you and people you invite)
 
 
-Made by [Glitch](https://glitch.com/)
--------------------
+Made by [Stephen Bau](https://glitch.com/@bauhouse)
+---------------------
 
-\ ゜o゜)ノ
+I was able to install xsltproc on Glitch with some information from the forum post [Super user glitch console?](https://support.glitch.com/t/super-user-glitch-console/2960)
+
+I grabbed the source code from GitHub for GNOME/libxslt and compiled it.
+
+```
+cd /tmp
+git clone https://github.com/GNOME/libxslt.git
+cd libxslt
+./autogen.sh --prefix=/tmp
+make
+make install
+make ~/bin
+cp xsltproc ~/bin/xsltproc
+cd
+xsltproc --version
+```
