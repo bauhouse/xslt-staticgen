@@ -272,7 +272,7 @@ Miscellaneous
 /* Blockquotes
 -------------------------------------------------- */
 blockquote {
-  border-left: 3px solid #d14414;
+  border-left: 3px solid #ddd;
   background-color: #fff;
   padding: 0px 0px 0px 12px;
   margin-left: 17px;
@@ -678,6 +678,46 @@ Navigation
 
 /*
 --------------------------------------------------
+Main
+-------------------------------------------------- */
+.box {
+  zoom: 1;
+  display: block;
+}
+
+#content h1, #content h2.section {
+  padding: 50px 40px 30px 40px;
+}
+
+.lead {
+  font-size: 1.5em;
+  line-height: 1.4em;
+  margin-bottom: 40px;
+}
+
+.page-content blockquote {
+  margin-bottom: 30px;
+}
+
+ol.footnotes {
+  font-size: 0.8em;
+}
+
+.box-title {
+  border-top: 20px solid #ccc;
+  padding: 30px 40px;
+  margin-bottom: 0;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.section-nav .box-title {
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
+
+/*
+--------------------------------------------------
 Footer
 -------------------------------------------------- */
 .section-container {
@@ -967,6 +1007,174 @@ Branding
 .nav > a:before {
   color: #fff;
 }
+
+/* Main Content
+-------------------------------------------------- */
+.main-content .page-content {
+  padding: 0 40px 40px;
+}
+
+.box {
+  background-color: #fff;
+  border-top: 1px solid #e4e4e4;
+}
+
+.section-nav .box-title {
+  padding-left: 0;
+}
+
+.section-nav .box-title {
+  border-color: #999;
+  margin-bottom: 0;
+}
+
+.section-nav .container {
+  padding: 0 40px 20px;
+}
+
+.section-nav ul li {
+  list-style-type: none;
+  border-top: 1px solid #dddddd;
+  margin: 0;
+}
+
+.section-nav ul li a {
+  text-transform: uppercase;
+  padding: 9px 15px 9px 0;
+  display: block;
+}
+
+.section-nav ul li a:hover {
+  color: #000;
+}
+
+.section-nav ul li a.current {
+  font-weight: bold;
+}
+
+.section-nav ul li ul {
+  padding-left: 0;
+  padding-top: 6px;
+  border-top: 1px solid #dddddd;
+}
+
+.section-nav ul li ul li {
+  border: none;
+  margin-left: -15px;
+}
+
+.section-nav ul li ul li a {
+  font-size: 14px;
+  text-transform: none;
+  border-bottom: none;
+  padding: 2px 0;
+  margin: 0;
+  color: #444;
+  border-left: 5px solid #fff;
+  padding-left: 10px;
+}
+
+.section-nav ul li ul li a:hover {
+  border-color: #bbb;
+}
+
+.section-nav ul li ul li a.current {
+  border-color: #bbb;
+  font-weight: bold;
+}
+
+.section-nav ul li ul li ul {
+  border: none;
+  margin-left: 15px;
+  padding-top: 0;
+}
+
+.section-nav ul li ul li ul li {
+  margin-left: 15px;
+  list-style: disc;
+  color: #fff;
+}
+
+.section-nav ul li ul li ul li a {
+  padding: 2px 0;
+  border: none;
+}
+
+.section-nav ul li ul li ul li li {
+  list-style: circle;
+  color: #fff;
+}
+
+.section-nav ul li ul li ul li ul {
+  margin-left: 0;
+}
+
+.section-nav ul li ul li ul li:hover {
+  color: #444;
+}
+
+.section-nav ul li ul li ul li:hover li:hover {
+  color: #444;
+}
+
+.section-nav ul li ul li ul li.current,
+.section-nav ul li ul li ul li.current_page_item {
+  list-style: disc;
+}
+
+.section-nav ul li ul li ul li.current a.current,
+.section-nav ul li ul li ul li.current_page_item a.current {
+  border-color: #bbb;
+  font-weight: bold;
+}
+
+.section-nav ul li ul li ul li.current li.current,
+.section-nav ul li ul li ul li.current li.current_page_item li,
+.section-nav ul li ul li ul li.current_page_item li.current,
+.section-nav ul li ul li ul li.current_page_item li.current_page_item li {
+  list-style: circle;
+}
+
+.section-nav ul li ul li:hover a {
+  border-color: #bbb;
+}
+
+.section-nav ul li.current-menu-parent > a,
+.section-nav ul li.current-menu-ancestor > a,
+.section-nav ul li.current_page_item > a {
+  font-weight: bold!important;
+}
+
+.section-nav ul li.current-menu-ancestor ul.sub-menu {
+  margin-bottom: 10px;
+}
+
+.section-nav ul li.current-menu-ancestor ul.sub-menu li a {
+  font-size: 14px;
+}
+
+.section-nav ul li.menu-parent-item ul.sub-menu {
+  display: none;
+}
+
+.section-nav ul li.menu-parent-item.current_page_item ul.sub-menu,
+.section-nav ul li.menu-parent-item.current_page_ancestor ul.sub-menu {
+  display: block;
+}
+
+.section-nav ul li.menu-parent-item.current_page_item > ul.sub-menu {
+  padding-bottom: 10px;
+}
+
+.section-nav li.current-menu-parent ul.sub-menu li.current_page_item > a {
+  color: #444;
+  font-weight: bold;
+}
+
+.section-menu > li:last-child {
+  border-bottom: 1px solid #ddd;
+}
+
 
 /* Grid Items
 -------------------------------------------------- */

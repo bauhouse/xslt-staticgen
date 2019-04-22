@@ -276,6 +276,39 @@ Medium Screens (750 pixels wide)
     border-bottom: 6px solid #0098c1;
   }
 
+  /* Content
+  -------------------------------------------------- */
+  #content {
+    padding: 40px;
+  }
+
+  .box {
+    -webkit-box-shadow: 0 0 7px rgba(50, 50, 50, 0.2);
+    -moz-box-shadow: 0 0 7px rgba(50, 50, 50, 0.2);
+    box-shadow: 0 0 7px rgba(50, 50, 50, 0.2);
+    background: #ffffff;
+    position: relative;
+    margin-bottom: 40px;
+  }
+
+  .main-content {
+    float: left;
+    width: 75.892857142857%;
+  }
+
+  .main-content .page-content {
+    padding: 0 40px 40px;
+  }
+
+  .section-aside {
+    float: right;
+    width: 24.107142857143%;
+  }
+
+  .section-nav .box-title {
+    padding-left: 0;
+  }
+
   /* Grid
   -------------------------------------------------- */
   .grid-nav li {
