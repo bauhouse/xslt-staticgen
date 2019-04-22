@@ -1,9 +1,7 @@
-var shortcutsNav = document.getElementById("shortcuts-nav");
-var searchNav = document.getElementById("nav-search");
-var directoryNav = document.getElementById("nav-directory");
-var globalNav = [shortcutsNav, searchNav, directoryNav];
+var nav = document.getElementById("global-nav");
+var navItems = nav.getElementsByClassName("nav");
 
-activateMenus(globalNav);
+activateMenus(navItems);
 
 function activateMenus(menus) {
   for (var i = 0; i < menus.length; i++) {
@@ -34,7 +32,7 @@ function closePanels(menus) {
 
 function clickOutsideMenus(menus) {
     document.addEventListener("click", function( event ) {
-    var openMenu = document.getElementsByClassName("open")[0];
+    var openMenu = nav.getElementsByClassName("open")[0];
     if(openMenu !== undefined) {
       if (!openMenu.contains(event.target)) {
         closePanels(menus);
