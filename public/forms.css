@@ -1,0 +1,118 @@
+/*
+==================================================
+
+FORMS
+
+==================================================
+*/
+
+::placeholder {
+  color: #ccc;
+}
+
+input,
+select,
+textarea {
+  box-sizing: padding-box;
+}
+
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  color: black;
+  font-size: 1em;
+  line-height: 1.5em;
+  width: 100%;
+  box-sizing: border-box;
+  padding: .75em;
+  margin: .5em 0 1em;
+  border: 1px solid #ccc;
+}
+
+select {
+  background: #fff;
+  width: 100%;
+  font-size: 1em;
+  padding: 1em .75em;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-overflow: '';
+}
+
+.dropdown {
+  position: relative;
+  margin: .5em 0 2em;
+}
+
+.dropdown .dropdown-options::after {
+  color: #999;
+  display: block;
+  background: white;
+  padding: .5em .3em .4em .8em;
+  font-family: "Octicons";
+  content: "\f0a3";
+  font-size: 1.3em;
+  pointer-events: none;
+  position: absolute;
+  top: .2em;
+  right: .2em;
+  border-left: 1px solid #eee;
+}
+
+label.field {
+  font-weight: 700;
+  display: block;
+  margin-top: .75em;
+}
+
+form.submitted input:valid,
+form.submitted select:valid,
+form.submitted textarea:valid {
+  border: 1px solid #ccc;
+}
+
+form.submitted input:invalid,
+form.submitted select:invalid,
+form.submitted textarea:invalid {
+  border: 1px solid #f00;
+  box-shadow: 0 0 0 2px #f00;
+}
+
+.checkboxes,
+.radio-buttons {
+  margin: .5em 0 1.5em;
+}
+
+.checkboxes label,
+.radio-buttons label {
+  margin-bottom: .5em;
+  display: block;
+}
+
+.button,
+button {
+  font-size: 1em;
+  text-transform: uppercase;
+  color: #fff;
+  background: #444;
+  width: 100%;
+  margin: .5em 0 1em;
+  padding: 1em .75em;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.button:hover,
+button:hover {
+  background: #000;
+}
+
+.button:active,
+button:active {
+  background: #0ac;
+}
