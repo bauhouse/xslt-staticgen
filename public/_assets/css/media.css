@@ -169,12 +169,25 @@ Medium Screens (750 pixels wide)
   }
 
   #shortcuts-nav .panel {
-    display: block;
+    background: none;
+    position: static;
+  }
+
+  .global-nav #shortcuts-nav .panel a:hover {
+    background-color: #333;
+  }
+
+  .global-nav #shortcuts-nav .panel a:active {
+    background-color: #000;
   }
 
   #utility-nav {
     width: auto;
     float: right;
+  }
+
+  #utility-nav .nav {
+    width: auto;
   }
 
   #nav-search,
@@ -183,12 +196,14 @@ Medium Screens (750 pixels wide)
     width: auto;
   }
 
-  #nav-search .panel {
+  #nav-search .panel,
+  #nav-contact .panel {
     max-width: 1120px;
     margin: 0 auto;
   }
 
   #nav-search input {
+    margin-top: 0;
     float: left;
   }
 
@@ -214,6 +229,25 @@ Medium Screens (750 pixels wide)
 
   #nav-directory .panel ul li {
     width: 20%;
+  }
+
+  #nav-contact fieldset {
+    float: left;
+    width: 48.5%;
+    margin-right: 1.5%;
+    margin-bottom: 0;
+  }
+
+  #email-subject {
+    margin-bottom: 0;
+  }
+
+  #nav-contact textarea {
+    width: 50%;
+  }
+
+  #nav-contact .button {
+    width: 50%;
   }
 
   .main-nav {
