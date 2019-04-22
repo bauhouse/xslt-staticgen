@@ -293,7 +293,7 @@ Medium Screens (750 pixels wide)
 
   .main-content {
     float: left;
-    width: 75.892857142857%;
+    width: 67%;
   }
 
   .main-content .page-content {
@@ -302,7 +302,7 @@ Medium Screens (750 pixels wide)
 
   .section-aside {
     float: right;
-    width: 24.107142857143%;
+    width: 33%;
   }
 
   .section-nav {
@@ -352,6 +352,18 @@ Large Screens (980 pixels wide)
   .main-nav li a {
     padding: 2.5em 1em;
   }
+
+  /* Content
+  -------------------------------------------------- */
+  .main-content {
+    width: 75.892857142857%;
+  }
+
+  .section-aside {
+    width: 24.107142857143%;
+  }
+
+
 
   /* Footer
   -------------------------------------------------- */
