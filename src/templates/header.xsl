@@ -8,7 +8,7 @@
     <xsl:apply-templates select="$navigation/data" mode="navigation" />
   </header>
   <xsl:if test="$has-section-nav = true()">
-    <a class="skip-link" href="#section-nav">Skip To Page Navigation</a>	
+    <a class="skip-link" href="#section-nav">Skip To Page Navigation</a>
   </xsl:if>
 </xsl:template>
 
@@ -21,7 +21,7 @@
 </xsl:template>
 
 <xsl:template match="navigation/page">
-	<li id="nav-{@handle}">
+	<li class="top-level" id="main-nav-{@handle}">
 		<xsl:if test="@handle = $root-page">
 			<xsl:attribute name="class">current</xsl:attribute>
 		</xsl:if>
