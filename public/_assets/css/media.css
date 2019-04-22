@@ -305,7 +305,20 @@ Medium Screens (750 pixels wide)
     width: 24.107142857143%;
   }
 
+  .section-nav {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .section-nav .box-title {
+    padding-top: 55px;
+    padding-bottom: 55px;
+    padding-left: 0;
+  }
+
+  .section-nav .box-title {
+    margin-left: 0;
+    margin-right: 0;
     padding-left: 0;
   }
 
