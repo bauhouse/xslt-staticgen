@@ -16,8 +16,7 @@
 <xsl:param name="config" select="document('../data/_config.xml')" />
 <xsl:param name="website-name" select="$config/data/config/website-name" />
 <xsl:param name="root" select="/data/params/root" />
-<xsl:param name="workspace" select="concat($root, 'workspace/')" />
-<xsl:param name="assets" select="concat($workspace, 'assets/')" />
+<xsl:param name="assets" select="concat($root, '_assets/')" />
 <xsl:param name="page-title" select="/data/params/page-title" />
 <xsl:param name="current-page" select="/data/params/current-page" />
 <xsl:param name="parent-page" select="/data/params/parent-page" />
@@ -38,7 +37,7 @@
 
 <!-- Directories -->
 <xsl:param name="css" select="concat($assets, 'css/')" />
-<xsl:param name="scripts" select="concat($assets, 'js/')" />
+<xsl:param name="js" select="concat($assets, 'js/')" />
 <xsl:param name="images" select="concat($assets, 'images/')" />
 
 <xsl:template match="/">

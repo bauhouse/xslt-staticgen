@@ -6,6 +6,7 @@
 <xsl:import href="header.xsl" />
 <xsl:import href="sub-nav.xsl" />
 <xsl:import href="footer.xsl" />
+<xsl:import href="js.xsl" />
 
 <xsl:template match="/" mode="body">
   <body class="section">
@@ -16,6 +17,7 @@
       <xsl:call-template name="sub-nav" />
       <xsl:call-template name="footer" />
     </div>
+  <xsl:apply-templates mode="js" />
   </body>
 </xsl:template>
 

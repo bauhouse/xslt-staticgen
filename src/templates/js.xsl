@@ -3,7 +3,7 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template match="data" mode="js">
-  <script src="{$scripts}modernizr.js"></script>
+  <script src="{$js}script.js"></script>
   <xsl:call-template name="add-js" />
 </xsl:template>
 
