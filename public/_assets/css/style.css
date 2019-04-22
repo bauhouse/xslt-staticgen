@@ -1161,7 +1161,7 @@ Branding
   color: #444;
 }
 
-.main-nav li.active a,
+.main-nav li.current a,
 .main-nav a:hover {
   color: #0098c1;
 }

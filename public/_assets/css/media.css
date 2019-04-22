@@ -271,8 +271,11 @@ Medium Screens (750 pixels wide)
     border-bottom: 6px solid #fff;
   }
 
-  .main-nav li.active a,
   .main-nav a:hover {
+    border-bottom: 6px solid #ddd;
+  }
+
+  .main-nav li.current a {
     border-bottom: 6px solid #0098c1;
   }
 
