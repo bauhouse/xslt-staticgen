@@ -22,8 +22,8 @@
 
 <xsl:template match="navigation/page">
 	<li class="top-level" id="main-nav-{@handle}">
-		<xsl:if test="@handle = $root-page">
-			<xsl:attribute name="class">current</xsl:attribute>
+		<xsl:if test="@handle = $current-page">
+			<xsl:attribute name="class">top-level current</xsl:attribute>
 		</xsl:if>
 		<a href="{$root}{@handle}/">
 			<xsl:value-of select="name" />
