@@ -1,71 +1,1010 @@
-/* styles */
-/* called by your view template */
+/*
+==================================================
 
-* {
-  box-sizing: border-box;
+Reset
+
+==================================================
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
 }
 
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+
+/*
+==================================================
+
+ELEMENTS
+
+==================================================
+*/
+
+/*
+--------------------------------------------------
+Root Element
+-------------------------------------------------- */
 body {
-  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
-  margin: 2em;
+  min-width: 300px;
 }
 
-h1 {
-  font-style: italic;
-  color: #373fff;
+/*
+--------------------------------------------------
+Text-Level Semantics
+-------------------------------------------------- */
+/* Anchors
+-------------------------------------------------- */
+a {
+  text-decoration: none;
 }
 
-.bold {
+/* Modifiers
+-------------------------------------------------- */
+strong {
   font-weight: bold;
 }
 
-p {
-  max-width: 600px;
+em {
+  font-style: italic;
 }
 
-form {
-  margin-bottom: 25px;
-  padding: 15px;
-  background-color: cyan;
-  display: inline-block;
-  width: 100%;
-  max-width: 340px;
-  border-radius: 3px;
+/*
+--------------------------------------------------
+Grouping Content
+-------------------------------------------------- */
+p,
+dl,
+hr,
+ol,
+ul,
+pre,
+table,
+address,
+fieldset {
+  margin-bottom: 20px;
 }
 
-input {
+hr {
+  border-color: #ddd;
+  border-style: solid;
+  border-width: 1px 0 0;
+  height: 0;
+}
+
+u {
+  text-decoration: none;
+  border-bottom: 1px dotted #777;
+}
+
+/*
+--------------------------------------------------
+Document Sections
+-------------------------------------------------- */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
   display: block;
-  margin-bottom: 10px;
-  padding: 5px;
-  width: 100%;
-  border: 1px solid lightgrey;
-  border-radius: 3px;
-  font-size: 16px;
 }
 
-button {
-  font-size: 16px;
-  border-radius: 3px;
-  background-color: lightgrey;
-  border: 1px solid grey;
-  box-shadow: 2px 2px teal;
-  cursor: pointer;
+/*
+==================================================
+
+TYPOGRAPHY
+
+==================================================
+*/
+/*
+--------------------------------------------------
+Fonts
+-------------------------------------------------- */
+body {
+  font: normal 100%/1.5em "Open Sans", Helvetica, Arial, sans-serif;
+  color: #666;
 }
 
-button:hover {
-  background-color: yellow;
+/*
+--------------------------------------------------
+Headings
+-------------------------------------------------- */
+h1 {
+  font-size: 2.6em;
 }
 
-button:active {
-  box-shadow: none;
+h2 {
+  font-size: 2.2em;
+}
+
+h3 {
+  font-size: 1.8em;
+}
+
+h4 {
+  font-size: 1.6em;
+}
+
+h5 {
+  font-size: 1.4em;
+}
+
+h6 {
+  font-size: 1.2em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin-bottom: .5em;
+  line-height: 1.2em;
+}
+
+/*
+--------------------------------------------------
+Text and Anchors
+-------------------------------------------------- */
+p {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+b {
+  font-weight: bold;
+}
+
+/*
+--------------------------------------------------
+Lists
+-------------------------------------------------- */
+ol {
+  list-style: decimal;
+}
+
+ul {
+  list-style: square;
 }
 
 li {
-  margin-bottom: 5px;
+  margin-left: 24px;
 }
 
-footer {
-  margin-top: 50px;
-  padding-top: 25px;
-  border-top: 1px solid lightgrey;
+ul li {
+  list-style-type: disc;
+}
+
+ol li {
+  list-style-type: decimal;
+}
+
+ol li ol li {
+  list-style-type: lower-alpha;
+}
+
+ul li li {
+  list-style-type: circle;
+}
+
+ul ul,
+ol ul,
+ol ol {
+  margin-bottom: 0;
+}
+
+ol ul li {
+  list-style-type: disc;
+}
+
+ol ul li li {
+  list-style-type: circle;
+}
+
+/*
+--------------------------------------------------
+Tables
+-------------------------------------------------- */
+th,
+td {
+  text-align: left;
+}
+
+td {
+  vertical-align: top;
+}
+
+th {
+  font-weight: bold;
+}
+
+/*
+--------------------------------------------------
+Miscellaneous
+-------------------------------------------------- */
+/* Blockquotes
+-------------------------------------------------- */
+blockquote {
+  border-left: 3px solid #d14414;
+  background-color: #fff;
+  padding: 0px 0px 0px 12px;
+  margin-left: 17px;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* Code
+-------------------------------------------------- */
+pre {
+  white-space: normal;
+  padding: 1em 1.5em;
+  border: 1px solid #ddd;
+  background-color: #eee;
+  word-wrap: break-word;
+}
+
+code {
+  white-space: pre;
+  font-family: monospace;
+  font-size: 1.2em;
+  color: #000;
+}
+
+/*
+--------------------------------------------------
+Branding
+-------------------------------------------------- */
+.branding {
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
+/*
+--------------------------------------------------
+Navigation
+-------------------------------------------------- */
+/* Global Navigation
+-------------------------------------------------- */
+.global-nav {
+  font-size: .875em;
+  font-size: .875rem;
+}
+
+/* Utility Navigation
+-------------------------------------------------- */
+#shortcuts-item,
+#utility-nav li a {
+  font-size: .875em;
+  font-size: .75rem;
+  text-transform: uppercase;
+  padding-top: .6em;
+  padding-bottom: 1.1em;
+}
+
+/* Main Navigation
+-------------------------------------------------- */
+.main-nav {
+  font-size: .875em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+/*
+--------------------------------------------------
+Buttons
+-------------------------------------------------- */
+.button {
+  display: inline-block;
+  font: bold normal 0.75em/1 "Open Sans", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  padding: .8em 1.2em;
+  background-color: #d14414;
+  color: #fff;
+  border-radius: 5px;
+}
+
+/*
+==================================================
+
+CONTENT
+
+==================================================
+*/
+/*
+--------------------------------------------------
+Branding
+-------------------------------------------------- */
+.branding {
+  margin: 0;
+}
+.branding a {
+  display: block;
+  padding: .6em 40px .6em;
+}
+
+/*
+--------------------------------------------------
+Navigation
+-------------------------------------------------- */
+.global-nav,
+.main-nav {
+  white-space: nowrap;
+  margin: 0;
+}
+
+.global-nav ul,
+.main-nav ul {
+  margin: 0;
+  padding: 0;
+}
+.global-nav li,
+.main-nav li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.global-nav a,
+.main-nav a {
+  display: block;
+  padding: .7em 12px;
+}
+
+.global-nav a span {
+  display: none;
+}
+
+.global-nav li {
+  float: left;
+}
+
+.main-nav ul {
+  margin: 0;
+  padding: 0;
+}
+.main-nav ul li {
+  position: relative;
+  z-index: 2;
+}
+
+.main-nav li ul.sub-menu {
+  display: none;
+}
+
+#shortcuts-item {
+  display: block;
+}
+
+#shortcuts-nav .panel {
+  display: none;
+}
+
+.panel {
+  display: none;
+}
+
+.fields-search {
+  margin-bottom: 0;
+}
+
+#nav-search.open .panel,
+#nav-directory.open .panel {
+  display: block;
+}
+
+#nav-search .panel,
+#nav-directory .panel {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: #333;
+  overflow: hidden;
+  z-index: 2000;
+  padding: 20px;
+  white-space: normal;
+  box-sizing: border-box;
+}
+
+#nav-directory .panel p {
+  font: normal normal 0.85em/1 "Open Sans", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+#nav-directory .panel ul li {
+  width: 20%;
+}
+
+#nav-directory .panel a {
+  font-size: 1em;
+  text-indent: 0;
+  text-align: center;
+}
+
+#shortcuts-nav.open .panel a {
+  /* Fix for iPhone font resizing jump */
+  font-size: 14px;
+}
+
+#shortcuts-nav {
+  width: 25%;
+}
+
+#utility-nav {
+  width: 75%;
+}
+
+#nav-search,
+#nav-directory,
+#nav-contact {
+  width: 33.3333333333%;
+}
+
+#shortcuts-item,
+#nav-search a,
+#nav-directory a,
+#nav-contact  a{
+  text-align: center;
+}
+
+#shortcuts-item:before,
+#nav-search > a:before,
+#nav-directory-item:before,
+#nav-contact a:before {
+  font-family: 'Octicons';
+  -webkit-font-smoothing: antialiased;
+  font-size: 2em;
+  position: relative;
+  top: .2em;
+}
+
+#shortcuts-item:before {
+  content: "\f05e";
+  left: .1em;
+}
+
+#nav-search > a:before {
+  content: "\f02e";
+  top: .25em;
+}
+
+#nav-search input {
+  margin-top: 0;
+}
+
+#nav-search .button {
+  margin-bottom: 0;
+  border-color: #000;
+}
+
+#nav-directory-item:before {
+  content: "\f007";
+}
+
+#nav-contact a:before {
+  content: "\f03b";
+  left: .1em;
+  top: .18em;
+}
+
+
+/* Fixed Global Navigation
+-------------------------------------------------- */
+.global-nav {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+}
+
+header {
+  padding-top: 3em;
+}
+
+
+
+/* Main Navigation
+-------------------------------------------------- */
+.main-nav {
+  padding: 0;
+  border-top: none;
+}
+
+.main-nav li {
+  border-top: 1px solid #e4e4e4;
+  padding-bottom: 0px;
+}
+
+.main-nav li a {
+  padding: 10px 20px;
+  border-radius: 0;
+}
+
+/* Sub Navigation
+-------------------------------------------------- */
+.sub-nav {
+  position: relative;
+  left: 0;
+  right: 0;
+  z-index: 19;
+  margin-bottom: 0px;
+  display: none;
+}
+.sub-nav a {
+  color: #fff;
+  color: rgba(255, 255, 255, 0.6);
+  display: block;
+}
+.sub-nav a:hover {
+  color: #fff;
+}
+.sub-nav li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.sub-nav .level-2 {
+  margin-bottom: 0;
+}
+.sub-nav .level-2 > .subsection {
+  display: none;
+  padding: 20px;
+  border-top: none!important;
+}
+.sub-nav .level-2 .nav-close {
+  position: relative;
+  display: block;
+  max-width: 1040px;
+  margin: 0 auto;
+  text-align: right;
+}
+.sub-nav .level-2 .nav-close a {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  display: block;
+  width: 40px;
+  height: 20px;
+  padding: 6px 0 14px;
+  text-align: center;
+  color: #fff;
+  background: #000;
+  background: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.sub-nav .level-2 .nav-close a:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+.sub-nav .level-3 {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.sub-nav .level-3 h4 a {
+  color: #fff;
+}
+.sub-nav .level-3 h4 a:hover {
+  font-weight: bold;
+}
+.sub-nav .subsection h3 {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 20px 0;
+  border-bottom: 1px solid #fff;
+  border-color: rgba(255, 255, 255, 0.4);
+  display: block;
+  font-size: 1.5em;
+}
+.sub-nav .subsection h3 a {
+  color: #fff;
+  padding: 0;
+}
+.sub-nav .subsection h3 a:hover {
+  font-weight: bold;
+}
+
+.sub-nav:hover li {
+  display: block;
+}
+
+@media screen and (max-width: 1120px) {
+  .sub-nav .subsection h3 {
+    margin: 0 20px;
+  }
+
+  .sub-nav .level-2 .nav-close {
+    margin: 0 40px;
+  }
+}
+.nav-close.bottom {
+  display: none;
+}
+
+.sub-nav .level-2 > .subsection {
+  display: none;
+  padding: 20px;
+}
+
+.sub-nav .level-2 > .subsection {
+  border-top: none!important;
+}
+
+.level-3 {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.level-3 > div h4 {
+  font-size: 1em;
+  padding: 0 20px;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+.level-4 {
+  padding: 0 20px;
+  font-size: .875em;
+}
+.level-4 > li {
+  line-height: 1.2em;
+  margin: .5em 0;
+}
+
+.section-nav {
+  padding-bottom: 20px;
+}
+.section-nav .level-4 {
+  padding-bottom: 10px;
+}
+
+/*
+--------------------------------------------------
+Footer
+-------------------------------------------------- */
+.section-container {
+  padding: 20px;
+}
+
+.nav-group .container {
+  padding: 0 20px;
+}
+
+.organization-info .vcard {
+  padding: 20px;
+}
+
+.organization-info .copyright {
+  padding: 0 20px 40px;
+}
+
+.organization-info h2 {
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+}
+
+.organization-info h2 a {
+  color: #ccc;
+}
+
+.organization-info h2 a:hover {
+  color: #fff;
+}
+
+.organization-info p {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size: .875em;
+  color: #999;
+}
+
+.organization-info a:hover {
+  color: #fff;
+}
+
+.contact-info .vcard {
+  padding: 20px;
+}
+
+.nav-group .container {
+  padding: 0 20px;
+}
+
+.contact-info .copyright {
+  padding: 0 20px 40px;
+}
+
+.contact-info h2 {
+  color: #fff;
+}
+
+.contact-info p {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size: .875em;
+  color: #ba969d;
+}
+
+.contact-info a {
+  color: #fff;
+}
+
+.contact-info a:hover {
+  color: #fff;
+}
+
+.footer-nav h4 {
+  font-size: .75em;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  margin-bottom: .25em;
+}
+
+.footer-nav h4 a {
+  color: #ccc;
+}
+
+.footer-nav h4 a:hover {
+  color: #fff;
+}
+
+.footer-nav li {
+  font-size: .875em;
+  list-style: none;
+  margin: 0;
+  color: #ba969d;
+}
+
+.footer-nav li a {
+}
+
+.footer-nav li a:hover {
+  color: #fff;
+}
+
+.site-info {
+  font-size: .875em;
+  padding: 20px;
+}
+
+p.copyright {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  margin: 20px 0 0;
+}
+
+/*
+--------------------------------------------------
+Grid Items
+-------------------------------------------------- */
+.grid-nav {
+  padding: 20px;
+}
+
+.grid-nav h4 {
+  font-size: .75em;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: #666;
+  margin: 20px;
+}
+
+.grid-nav ul {
+  padding: 15px;
+}
+
+.grid-nav li {
+  list-style: none;
+  margin: 0;
+}
+
+.grid-item {
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.grid-item a {
+  display: block;
+  text-align: center;
+  padding: 20px;
+}
+
+
+/*
+==================================================
+
+LAYOUT
+
+==================================================
+*/
+#bottom {
+  padding: 20px;
+}
+
+/*
+--------------------------------------------------
+Clearing
+-------------------------------------------------- */
+/* http://www.positioniseverything.net/easyclearing.html */
+.global-nav ul:after,
+.main-header:after,
+.main-nav ul:after,
+section:after,
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.global-nav ul,
+.main-header,
+.main-nav ul,
+section,
+.clearfix {
+  zoom: 1;
+  display: block;
+}
+
+/*
+==================================================
+
+COLORS
+
+==================================================
+*/
+/*
+--------------------------------------------------
+Typography
+-------------------------------------------------- */
+a {
+  color: #0098c1;
+}
+
+/*
+--------------------------------------------------
+Backgrounds
+-------------------------------------------------- */
+/* Area Backgrounds
+-------------------------------------------------- */
+#main,
+#overview {
+  background-color: #f1f1f1;
+}
+
+#content {
+  background-color: #f1f1f1;
+}
+
+#secondary {
+  background-color: #eee;
+}
+
+#bottom {
+  background-color: #333;
+}
+
+/*
+--------------------------------------------------
+Branding
+-------------------------------------------------- */
+.branding a {
+  color: #666;
+}
+
+.branding a:hover {
+  color: #000;
+}
+
+/* Navigation Backgrounds
+-------------------------------------------------- */
+.global-nav {
+  background-color: #555;
+}
+
+.global-nav a {
+  color: #aaa;
+}
+
+.global-nav a:hover {
+  color: #fff;
+  background-color: #333;
+}
+
+.global-nav a:active {
+  background-color: #000;
+}
+
+.global-nav #nav-search:hover a,
+.global-nav #nav-search.open a,
+.global-nav #nav-directory.open #nav-directory-item {
+  color: #fff;
+  background-color: #333;
+}
+
+.global-nav #nav-search a:active,
+.global-nav #nav-directory.open #nav-directory-item:active {
+  background-color: #000;
+}
+
+.global-nav .panel a:hover {
+  background: #222;
+}
+
+.global-nav .panel a:active {
+  background: #000;
+}
+
+#nav-directory .panel p {
+  color: #ccc;
+}
+
+.main-nav a {
+  color: #444;
+}
+
+.main-nav li.active a,
+.main-nav a:hover {
+  color: #0098c1;
+}
+
+#shortcuts-item:before,
+#nav-search a:before,
+#nav-directory a:before,
+#nav-contact a:before {
+  color: #fff;
+}
+
+/* Grid Items
+-------------------------------------------------- */
+.grid-item a {
+  background: #f9f9f9;
+}
+
+.grid-item a:hover {
+  background: #eee;
 }
