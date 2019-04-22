@@ -4,9 +4,10 @@
 
 <xsl:template match="/" mode="head">
   <head>
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="description" content="{$website-name}" />
     <meta name="author" content="{$website-name}" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <xsl:apply-templates mode="page-title" />
     <xsl:apply-templates mode="css" />
   </head>
