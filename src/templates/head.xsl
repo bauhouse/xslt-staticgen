@@ -21,9 +21,11 @@
 </xsl:template>
 
 <xsl:template match="data" mode="css">
-	<link rel="stylesheet" href="{$css}style.css" />
-	<link rel="stylesheet" href="{$css}media.css" />
-	<link rel="stylesheet" href="{$css}forms.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:100,300,700" />
+  <link rel="stylesheet" href="{$css}style.css" />
+  <link rel="stylesheet" href="{$css}media.css" />
+  <link rel="stylesheet" href="{$css}forms.css" />
 </xsl:template>
 
 </xsl:stylesheet>
