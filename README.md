@@ -25,8 +25,9 @@ and run the command.
 The page layouts can be viewed in a browser at the following URLs: 
 
 * <http://xslt.glitch.me/>
-* <http://xslt.glitch.me/news/>
-* <http://xslt.glitch.me/events/>
-* <http://xslt.glitch.me/services/>
 * <http://xslt.glitch.me/about/>
+* <http://xslt.glitch.me/team/>
+* <http://xslt.glitch.me/work/>
+* <http://xslt.glitch.me/process/>
+* <http://xslt.glitch.me/blog/>
 * <http://xslt.glitch.me/contact/>
